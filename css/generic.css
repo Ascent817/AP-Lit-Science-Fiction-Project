@@ -34,7 +34,16 @@
 
 section p, section cite, .modal p, .modal cite {
   line-height: 2;
+}
+
+section p, .modal p {
   text-indent: 1em;
+}
+
+cite {
+  font-style: italic;
+  margin-bottom: 10px;
+  display: block;
 }
 
 body {
@@ -159,6 +168,7 @@ div.book-card p.author {
   margin-top: 0px;
   color: rgba(255, 255, 255, 0.5);
   font-size: smaller;
+  text-indent: 0;
 }
 
 div.book-card.modal {

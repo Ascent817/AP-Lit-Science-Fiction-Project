@@ -2,6 +2,13 @@ let active = document.querySelector('.toggle-container').children[0];
 
 toggleClick(active);
 
+let citeContainer = document.getElementById('all-cites');
+
+Array.from(document.getElementsByTagName('cite')).forEach((cite) => {
+  let copy = cite.cloneNode(true);
+  citeContainer.appendChild(copy);
+});
+
 function toggleClick(e) {
 
   active = e;
@@ -27,12 +34,8 @@ function toggleClick(e) {
     content.classList.add('hidden');
   });
 
-  // get id of the element
-
-  console.log(e);
   let id = e.id.split('-')[0];
   document.getElementById(id).classList.remove('hidden');
-  console.log(id);
 }
 
 window.addEventListener('resize', () => {
